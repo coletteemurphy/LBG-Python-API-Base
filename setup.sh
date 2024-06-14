@@ -3,14 +3,14 @@
 set -e
 # Define Docker image name
 DOCKER_IMAGE="lbg"
-cleanup() {
-    echo "Cleaning up previous build artifacts..."
-    sleep 3
-    # Add commands to clean up previous build artifacts
-    docker rm -f $(docker ps -aq) || true
-    docker rmi -f $(docker images) || true
-    echo "Cleanup done."
-}
+#cleanup() {
+#    echo "Cleaning up previous build artifacts..."
+#    sleep 3
+#    # Add commands to clean up previous build artifacts
+#    docker rm -f $(docker ps -aq) || true
+#    docker rmi -f $(docker images) || true
+#    echo "Cleanup done."
+#}
 # Function to build the Docker image
 build_docker() {
     echo "Building the Docker image..."
