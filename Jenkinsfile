@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        GCR_CREDENTIALS_ID = '[NAME_OF_GCR_CREDENTIALS]'
+        GCR_CREDENTIALS_ID = 'jenkinsSecret'
         IMAGE_NAME = 'test-image-7'
-        GCR_URL = 'gcr.io/[PROJECT_ID_GOES_HERE]'
-        PROJECT_ID = ' [PROJECT_ID_GOES_HERE] '
-        CLUSTER_NAME = 'demo-cluster'
+        GCR_URL = 'gcr.io/lbg-mea-build-c19'
+        PROJECT_ID = 'lbg-mea-build-c19'
+        CLUSTER_NAME = 'demo-cluster-colette'
         LOCATION = 'europe-west2-c'
-        CREDENTIALS_ID = '[CREDENTIALS_ID_GOES_HERE(for the k8s service account)]'
+        CREDENTIALS_ID = 'kubernetesSecret'
     }
     stages {
         stage('Build and Push to GCR') {
