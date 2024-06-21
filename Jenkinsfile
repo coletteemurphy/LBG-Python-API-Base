@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         GCR_CREDENTIALS_ID = 'jenkinsSecret' // The ID you provided in Jenkins credentials
-        IMAGE_NAME = 'test-image-5'
+        IMAGE_NAME = 'colette-test-image-5'
         GCR_URL = 'gcr.io/lbg-mea-build-c19'
     }
     stages {
